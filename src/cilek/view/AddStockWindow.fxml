@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="552.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="330.0" style="-fx-background-color: transparent; -fx-text-fill: linear-gradient(from 25% 25% to 100% 100%,#a8d4e6,#e9f1f5);" text="   ÜRÜN EKLEME YERİ">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="99.0" text="Ürün ismi:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" prefHeight="50.0" prefWidth="506.0" />
+                  <Label prefHeight="28.0" prefWidth="176.0" text="Barkod_numarası:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="barcodeNumberField" prefHeight="50.0" prefWidth="221.0" />
+                  <Label prefHeight="28.0" prefWidth="62.0" text="Stok:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="quantityField" prefHeight="50.0" prefWidth="309.0" VBox.vgrow="NEVER" />
+                  <Label prefHeight="28.0" prefWidth="100.0" text="Alış fiyatı:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="takingPriceField" prefHeight="50.0" prefWidth="144.0" VBox.vgrow="NEVER" />
+                  <Label prefHeight="28.0" prefWidth="105.0" text="Satış fiyatı:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="priceField" prefHeight="50.0" prefWidth="146.0" VBox.vgrow="NEVER" />
+                  <Button mnemonicParsing="false" onAction="#addButtonActions" prefHeight="64.0" prefWidth="146.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #eb88d0, #67aec7);" stylesheets="@ADDCSS.css">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PLUS_CIRCLE" size="3EM" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

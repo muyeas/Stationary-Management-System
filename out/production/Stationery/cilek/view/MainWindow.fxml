@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="674.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="menuField" layoutY="2.0" prefHeight="26.0" prefWidth="942.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="DOSYA">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#salesInformation" text="SATIŞ BİLGİLERİ" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="STOK">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#stockWindowField" text="STOCK" />
+                  <MenuItem mnemonicParsing="false" onAction="#allStockWindowField" text="TÜM STOK" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="ÇIKIŞ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quitSystem" text="quit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox layoutX="31.0" layoutY="33.0" AnchorPane.bottomAnchor="157.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="45.39999999999998" AnchorPane.topAnchor="33.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="484.0" prefWidth="523.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label focusTraversable="false" prefHeight="50.0" prefWidth="294.0" style="-fx-text-fill: linear-gradient(from 25% 25% to 100% 100%,#a8d4e6,#e9f1f5);" text="ÇİLEK KIRTASİYE">
+                           <font>
+                              <Font name="System Bold" size="33.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableFieldS" focusTraversable="false" prefHeight="433.0" prefWidth="652.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="noColumn" prefWidth="63.20001298189163" text="No" />
+                      <TableColumn fx:id="nameColumn" prefWidth="167.9999656677246" text="ÜRÜN İSMİ" />
+                        <TableColumn fx:id="barcodeNumberColumn" prefWidth="188.8000030517578" text="BARKOD NUMARASI" />
+                        <TableColumn fx:id="priceColumn" prefWidth="96.0" style="-fx-background-color: yellow;" text="FİYAT">
+                           <graphic>
+                              <Label text="₺">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="amountColumn" prefWidth="131.20001220703125" text="ADET" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="73.5999755859375" text="QUANTITY" visible="false" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="393.0" prefWidth="302.0">
+               <children>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#quantityAction" prefHeight="36.0" prefWidth="198.0" style="-fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #a61b1b, #fc8888);;" text="MİKTAR ARTTIR">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" top="50.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="ARROW_UP" />
+                     </graphic>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #a61b1b, #fc8888);;" text="MİKTAR AZALT">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="ARROW_DOWN" />
+                     </graphic>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#takeOutProduct" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #a61b1b, #fc8888);;" text="ÜRÜNÜ ÇIKART">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="40.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="scanBarcode" onKeyPressed="#keyPressedAction" prefHeight="30.0" prefWidth="268.0" promptText="BARKOD ALANI" style="-fx-background-color: linear-gradient(from 25px 25px to 100px 100px,#abafb0 , #b6b9ba);">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label focusTraversable="false" prefHeight="18.0" prefWidth="112.0" text="ÖDENEN MİKTAR" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="90.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator focusTraversable="false" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <TextField fx:id="paymentAmountField" focusTraversable="false" prefHeight="66.0" prefWidth="234.0" promptText="ÖDENEN MİKTAR" style="-fx-font-size: 30px;">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label focusTraversable="false" prefHeight="18.0" prefWidth="66.0" text="PARAÜSTÜ" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="105.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator focusTraversable="false" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <TextField fx:id="changeField" alignment="BOTTOM_LEFT" editable="false" focusTraversable="false" prefHeight="70.0" prefWidth="229.0" promptText="PARAÜSTÜ" style="-fx-font-size: 30px;">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="31.0" layoutY="526.0" prefHeight="138.0" prefWidth="897.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Button alignment="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#cashButtonAction" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #045905, #9ce38a);;" text=" NAKİT" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIcon glyphName="MONEY" size="1EM" text="" wrappingWidth="28.000045776367188">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+            </Button>
+            <TextField fx:id="sumField" editable="false" focusTraversable="false" prefHeight="138.0" prefWidth="447.0" style="-fx-font-size: 53px;">
+               <font>
+                  <Font name="System Bold" size="65.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

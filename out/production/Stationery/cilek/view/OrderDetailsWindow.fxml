@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" layoutX="149.0" layoutY="98.0" prefHeight="163.0" prefWidth="302.0" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="98.0">
+         <children>
+            <ListView fx:id="orderDetailsList" prefHeight="291.0" prefWidth="202.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="160.0" layoutY="26.0" prefHeight="39.0" prefWidth="279.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.8" AnchorPane.topAnchor="26.0">
+         <children>
+            <Label style="-fx-text-fill: linear-gradient(from 25% 25% to 100% 100%,#a8d4e6,#e9f1f5);;" text="SİPARİŞ DETAYI">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

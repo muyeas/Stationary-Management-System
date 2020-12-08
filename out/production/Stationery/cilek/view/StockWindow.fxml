@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="626.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="3.0" prefHeight="626.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tableField" prefHeight="539.0" prefWidth="879.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="noColumn" prefWidth="99.99999696016312" style="-fx-background-color: white;" text="NO" />
+                  <TableColumn fx:id="nameColumn" editable="false" prefWidth="84.80001831054688" style="-fx-background-color: #c9f2f5;" text="ÜRÜN İSMİ" />
+                  <TableColumn fx:id="barcodeNumberColumn" prefWidth="124.00001525878906" style="-fx-background-color: #dae0db;" text="BARKOD NUMARASI" />
+                  <TableColumn fx:id="stockColumn" editable="false" prefWidth="124.00001525878906" style="-fx-background-color: #f5daf4;" text="STOK" />
+                  <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="90.4000244140625" style="-fx-background-color: #f7f6a6;" text="KALAN ADET" />
+                  <TableColumn fx:id="takingPriceColumn" minWidth="0.0" prefWidth="113.5999755859375" style="-fx-background-color: #ccedd4;" text="ALIŞ FİYATI">
+                     <graphic>
+                        <Label text="₺" />
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="567.1998901367188" style="-fx-background-color: #ff5e5e;" text="SATIŞ FİYATI">
+                     <graphic>
+                        <Label text="₺" />
+                     </graphic>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="116.0" prefWidth="879.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="879.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addProduct" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #828788;">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="100.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="PLUS" selectionFill="BLACK" size="2em" />
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deleteProduct" prefHeight="30.0" prefWidth="82.0" style="-fx-background-color: #828788;">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="MINUS" size="2EM" />
+                           </graphic>
+                        </Button>
+                        <FontAwesomeIcon glyphName="SEARCH">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <TextField fx:id="searchWbarcode" prefHeight="70.0" prefWidth="270.0" promptText="             ARAMA BUTONU">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="8.0" prefWidth="879.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextField layoutX="804.0" layoutY="10.0" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Ürün ismi" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="47.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField layoutX="740.0" layoutY="10.0" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Barkod numarası" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="54.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField layoutX="389.0" layoutY="10.0" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Stok" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="55.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField layoutX="659.0" layoutY="10.0" prefHeight="34.0" prefWidth="127.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Kalan Adet" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField layoutX="635.0" layoutY="10.0" prefHeight="34.0" prefWidth="99.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Alış Fiyatı" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField layoutX="441.0" layoutY="10.0" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Satış Fiyatı" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="738.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #c9f2f5;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="barcodeNumberField" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #dae0db;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="9.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="stockField" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #f5daf4;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="quantityField" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #f7f6a6;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="takingCostField" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #ccedd4;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="costField" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #ff5e5e;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="9.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="237.0" prefWidth="879.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#changeFeatrues" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #828788;" text="BİLGİLERİ DEĞİŞTİR">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIcon glyphName="EXCHANGE" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="481.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" layoutX="106.0" layoutY="111.0" prefHeight="250.0" prefWidth="388.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="111.0">
+         <children>
+            <TableView fx:id="orderTable" prefHeight="378.0" prefWidth="406.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="orderIdColumn" prefWidth="144.00000303983688" style="-fx-background-color: #e9f1f5;" text="Satış Numarası" />
+                <TableColumn fx:id="DateColumn" prefWidth="152.7999725341797" style="-fx-background-color: #e9f1f5;" text="Satış Saati" />
+                  <TableColumn fx:id="TotalPriceColumn" prefWidth="142.4000244140625" style="-fx-background-color: #e9f1f5;" text="Toplam Tutar" />
+                  <TableColumn fx:id="orderDetails" prefWidth="158.39996337890625" style="-fx-background-color: #e9f1f5;" text="Sipariş Detayları" />
+              </columns>
+            </TableView>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="57.0" prefWidth="388.0">
+               <children>
+                  <TextField fx:id="totalSales" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: black; -fx-text-fill: white;">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#resetSales" prefHeight="39.0" prefWidth="122.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="TRASH" size="2em" />
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="168.0" layoutY="44.0" prefHeight="39.0" prefWidth="279.0" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="152.8" AnchorPane.topAnchor="44.0">
+         <children>
+            <Label style="-fx-text-fill: linear-gradient(from 25% 25% to 100% 100%,#a8d4e6,#e9f1f5);;" text="SİPARİŞ ÖZETİ">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
