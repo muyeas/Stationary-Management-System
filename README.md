@@ -1,6 +1,6 @@
 # Cilek Kirtasiye Stationery and Purchase Management System
 
-
+![Project Image](https://i.ibb.co/c1z1Hb9/image-2020-12-09-014444.png)
 
 ### Table of Contents
 You're sections headers will be used to reference location of destination.
@@ -55,9 +55,6 @@ Product details sold
 
 ## User interface
 ![Project Image](https://i.ibb.co/5GFy9bg/image-2020-12-09-014735.png) 
-
-
-![Project Image](https://i.ibb.co/c1z1Hb9/image-2020-12-09-014444.png)
 
 
 ![Project Image](https://i.ibb.co/MMDwRRx/image-2020-12-09-014906.png)
